@@ -67,4 +67,10 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  pageTransition: {
+    name: 'page',
+    enterActiveClass: 'animate__animated animate__fadeIn animate__faster',
+    leaveActiveClass: 'animate__animated animate__fadeOut animate__faster',
+    mode: 'out-in',
+  },
 }

@@ -15,6 +15,7 @@
 
 <script>
 import Vue from 'vue'
+import 'animate.css'
 export default Vue.extend({})
 </script>
 
