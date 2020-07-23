@@ -1,5 +1,5 @@
 <template>
-  <p class="text-2xl">Look at these characters!!!</p>
+  <div></div>
 </template>
 
 <script>

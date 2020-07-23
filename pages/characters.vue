@@ -1,8 +1,12 @@
 <template>
   <div>
-    <p class="text-3xl">{{ character.name }}</p>
-    <p class="text-2xl">{{ character.playbook }}</p>
-    <nuxt-content :document="character" />
+    Characters live here
+    <ul>
+      <li v-for="char of characters" :key="char.id">
+        <NuxtLink :to="char.path">{{ char.name }}</NuxtLink>
+      </li>
+    </ul>
+    <nuxt-child />
   </div>
 </template>
 
@@ -11,9 +15,8 @@ import Vue from 'vue'
 
 export default Vue.extend({
   async asyncData({ $content, params }) {
-    const character = await $content('characters', params.slug).fetch()
-
-    return { character }
+    const characters = await $content('characters', params.slug).fetch()
+    return { characters }
   },
 })
 </script>

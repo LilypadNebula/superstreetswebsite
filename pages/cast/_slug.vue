@@ -1,8 +1,9 @@
 <template>
   <div>
-    <p class="text-3xl">{{ character.name }}</p>
-    <p class="text-2xl">{{ character.playbook }}</p>
-    <nuxt-content :document="character" />
+    <p class="text-3xl">{{ cast.name }}</p>
+    <p class="text-2xl">@{{ cast.twitter }}</p>
+    <p class="text-2xl">{{ cast.pronouns }}</p>
+    <nuxt-content :document="cast" />
   </div>
 </template>
 
@@ -11,9 +12,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
   async asyncData({ $content, params }) {
-    const character = await $content('characters', params.slug).fetch()
+    const cast = await $content('cast', params.slug).fetch()
 
-    return { character }
+    return { cast }
   },
 })
 </script>
