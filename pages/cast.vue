@@ -15,8 +15,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   async asyncData({ $content, params }) {
-    const cast = await $content('cast', params.slug).fetch()
-
+    const cast = await $content('cast').fetch()
     return { cast }
   },
 })

@@ -15,7 +15,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   async asyncData({ $content, params }) {
-    const characters = await $content('characters', params.slug).fetch()
+    const characters = await $content('characters').fetch()
     return { characters }
   },
 })
