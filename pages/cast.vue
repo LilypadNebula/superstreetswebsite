@@ -6,7 +6,7 @@
         <NuxtLink :to="member.path">{{ member.name }}</NuxtLink>
       </li>
     </ul>
-    <nuxt-child />
+    <nuxt-child :key="$route.params.slug" />
   </div>
 </template>
 

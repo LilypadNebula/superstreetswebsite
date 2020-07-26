@@ -1,6 +1,10 @@
 <template>
   <div>
-    heeeeeeeeeey
+    <p>
+      Super Streets is an actual play podcast inspired by Birds of Prey about
+      strong female characters fighting corrupt institutions and all around
+      being cool
+    </p>
   </div>
 </template>
 

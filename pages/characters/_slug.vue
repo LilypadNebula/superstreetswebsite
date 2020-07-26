@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <p class="text-3xl">{{ character.name }}</p>
-    <p class="text-2xl">{{ character.playbook }}</p>
-    <nuxt-content :document="character" />
+  <div class="flex justify-between">
+    <div class="w-1/4 text-center">
+      <p class="text-3xl">{{ character.name }}</p>
+      <p class="text-2xl">{{ character.playbook }}</p>
+    </div>
+    <div class="w-1/2 text-justify">
+      <nuxt-content :document="character" />
+    </div>
   </div>
 </template>
 

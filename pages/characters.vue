@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="flex flex-col items-center w-full">
     Characters live here
     <ul>
       <li v-for="char of characters" :key="char.id">
         <NuxtLink :to="char.path">{{ char.name }}</NuxtLink>
       </li>
     </ul>
-    <nuxt-child />
+    <nuxt-child :key="$route.params.slug" />
   </div>
 </template>
 
